@@ -1,26 +1,21 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react'
+import { Die } from './components/Die'
 
-function App() {
+const App = () => {
+  const [number, setNumber] = useState(0)
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <>
+      <Die />
+      <Die />
+      <button
+        style={{ fontSize: 20, width: 200, height: 70, marginTop: 50 }}
+        onClick={() => setNumber(number + 1)}
+      >
+        Roll Dice
+        <p>{number}</p>
+      </button>
+    </>
+  )
 }
 
-export default App;
+export default App
