@@ -6,12 +6,10 @@ export const Die = () => {
   let classes = `fas fa-dice-${dieValue} fa-5x`
   return (
     <div>
-      <div style={{ display: 'flex' }}>
-        <i
-          style={{ color: 'DodgerBlue', display: 'block', margin: 15 }}
-          className={classes}
-        />
-      </div>
+      <i
+        style={{ color: 'DodgerBlue', display: 'block', margin: 15 }}
+        className={classes}
+      />
     </div>
   )
 }
