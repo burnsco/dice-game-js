@@ -15,7 +15,7 @@ const App = () => {
   }
 
   return (
-    <>
+    <div className="App-header">
       <div className={rolling ? 'dice shakeDice' : 'dice'}>
         <Die />
         <Die />
@@ -29,7 +29,7 @@ const App = () => {
       >
         <p>Roll</p>
       </button>
-    </>
+    </div>
   )
 }
 
