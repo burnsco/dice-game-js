@@ -21,13 +21,14 @@ const App = () => {
         <Die />
       </div>
       <button
+        disabled={rolling}
         style={{ fontSize: 20, width: 200, height: 70, marginTop: 50 }}
         onClick={() => {
           rollDice()
           setNumber(number + 1)
         }}
       >
-        <p>Roll</p>
+        <p>{rolling ? 'Rolling...' : 'Roll Dice'}</p>
       </button>
     </div>
   )
